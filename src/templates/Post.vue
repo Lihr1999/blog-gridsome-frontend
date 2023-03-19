@@ -4,7 +4,7 @@
     <header
       class="masthead"
       :style="{
-        backgroundImage: `url(http://localhost:1337${$page.post.cover.url})`,
+        backgroundImage: `url(${GRIDSOME_API_URL + $page.post.cover.url})`,
       }"
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -64,9 +64,9 @@ export default {
   name: "PostPage",
   methods: {
     mdToHtml(markdown) {
-      return md.render(markdown)
-    }
-  }
+      return md.render(markdown);
+    },
+  },
 };
 </script>
 
